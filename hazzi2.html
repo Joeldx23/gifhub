@@ -1,0 +1,16 @@
+<audio id="background-music" loop>
+    <source src="URL-DE-TU-CANCION.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    function openLetter() {
+        document.getElementById('envelope').style.display = 'none';
+        document.getElementById('message-container').style.transform = 'translate(-50%, -50%) scale(1)';
+
+        let audio = document.getElementById('background-music');
+        audio.muted = false; // Asegurar que el sonido no esté silenciado
+        audio.volume = 1.0; // Ajustar volumen al máximo
+        audio.play().catch(error => console.log("Reproducción bloqueada: " + error));
+    }
+</script>
